@@ -13,7 +13,6 @@ import Header from './components/Header';
 
 function App() {
 
-
   return (
     <Router>
       <div className="d-flex flex-column" style={{minHeight: "100vh"}}>
@@ -21,10 +20,11 @@ function App() {
         <Container className="flex-grow-1">
           <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/users" element={<Users/>} />
+            <Route path="/pets" element={<Users/>} />
           </Routes>
         </Container>
-        <footer className="bg-dark text-white text-center p-3">
+        {/* <footer className="bg-dark text-white text-center p-3"> */}
+        <footer style={{ backgroundColor: '#52d552', color: '#FFF', padding: '16px', textAlign: 'center' }}>
           Infnet - projeto final
         </footer>
       </div>

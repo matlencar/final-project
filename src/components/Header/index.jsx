@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 import 
-logo from "../../assets/Infnet-Logo.png"
+logo from "../../assets/monder_pets.png"
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
@@ -24,31 +24,24 @@ const Header = () => {
 
     return (
     <>
-    <Navbar color="dark" dark expand="md">
-        <NavbarBrand>
+    <Navbar style={{ backgroundColor: '#52d552' }}>
+        <NavbarBrand style={{ color: '#FFFFFF' }}>
         <img src={logo} width="50px;" style={{paddingRight: "5px"}}/>
-        MIT Full Stack 2025
+        Cadastro unico de pets - CUP
         </NavbarBrand>
-        <NavbarToggler onClick={toggle}/>
-        <Collapse isOpen={isOpen} navbar>
             <Nav className="ms-auto" navbar>
-                <NavItem>
-                    <NavLink tag={Link} to="/">
+                <NavItem className="d-flex" style={{ flexDirection: 'row' ,justifyContent: 'flex-end', marginRight: '6px', gap: '10px' }}>
+                    <NavLink style={{  color: '#FFF' }} tag={Link} to="/">
                         Home
                     </NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink tag={Link} to="/users">
-                        Users
+                    <NavLink style={{  color: '#FFF' }} tag={Link} to="/pets">
+                        Sobre - Pets
                     </NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink tag={Link} to="/feedback">
-                        Feedback
-                    </NavLink>
-                </NavItem>
+               
+                
             </Nav>
-        </Collapse>
+        
     </Navbar>
     </>
     );
