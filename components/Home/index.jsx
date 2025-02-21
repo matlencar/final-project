@@ -3,7 +3,7 @@ import {
   Form,
   FormGroup,
   Label,
-  Input,
+  Input, Button
 } from "reactstrap";
 
 import { FormsPets } from '../FormsPets/index'
@@ -16,7 +16,7 @@ export function Home() {
     const [email, setEmail] = useState('');
   return (
     <>
-    <h3 className="color-dark p-2 m-2">Ficha de cadastro</h3>
+    <h3 className="color-dark p-4">Ficha de cadastro</h3>
       <Form>
         <FormGroup>
           <Label for="nome">Nome: </Label>
@@ -27,24 +27,6 @@ export function Home() {
           onChange={(e) => setNome(e.target.value)}
           />
         </FormGroup>
-        {/* <FormGroup>
-        <Label for="nome">Sexo: </Label>
-          <Input
-          invalid={sexo === '' ? true : false} 
-          placeholder="Selecione o sexo do pet"
-          value={sexo}
-          onChange={(e) => setSexo(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup>
-        <Label for="nome">Tipo de pet: </Label>
-          <Input
-          invalid={tipo === '' ? true : false} 
-          placeholder="Selecione o tipo de animal:"
-          value={tipo}
-          onChange={(e) => setTipo(e.target.value)}
-          />
-        </FormGroup> */}
         <FormsPets />
         <FormGroup>
         <Label for="nome">E-Mail: </Label>
@@ -56,6 +38,15 @@ export function Home() {
           />
         </FormGroup>
       </Form>
+
+      <div style={{ display: 'flex', gap: '1rem' }}>
+        <Button style={{ borderRadius: '6px'}} size="20px" color="success">
+          Confirmar
+        </Button>
+        <Button style={{ borderRadius: '6px'}} size="20px" color="danger">
+          Cancelar
+        </Button>
+      </div>
     </>
   );
 }

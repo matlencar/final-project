@@ -9,7 +9,8 @@ import './App.css';
 import { Footer } from "./components/Footer";
 import { Header } from './components/Header';
 import { Home } from './components/Home';
-import { Users } from './components/Users';
+import { Sobre } from "./components/Sobre";
+
 
 export function App() {
 
@@ -20,7 +21,7 @@ export function App() {
         <Container className="flex-grow-1">
           <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/pets" element={<Users/>} />
+            <Route path="/pets" element={<Sobre />} />
           </Routes>
         </Container>
         <Footer />
