@@ -1,17 +1,18 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import {
-  Container 
-} from "reactstrap"
+  Container
+} from "reactstrap";
 
 
-import './App.css'
+import './App.css';
+import { Footer } from "./components/Footer";
+import { Header } from './components/Header';
 import { Home } from './components/Home';
-import Users from './components/Users';
-import Header from './components/Header';
+import { Sobre } from "./components/Sobre";
 
-function App() {
+
+export function App() {
 
   return (
     <Router>
@@ -20,16 +21,13 @@ function App() {
         <Container className="flex-grow-1">
           <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/pets" element={<Users/>} />
+            <Route path="/pets" element={<Sobre />} />
           </Routes>
         </Container>
-        {/* <footer className="bg-dark text-white text-center p-3"> */}
-        <footer style={{ backgroundColor: '#52d552', color: '#FFF', padding: '16px', textAlign: 'center' }}>
-          Infnet - projeto final
-        </footer>
+        <Footer />
       </div>
     </Router>
   );
 }
 
-export default App
+// export default App
