@@ -10,7 +10,7 @@ export function Header() {
     <>
       <Navbar style={{ backgroundColor: "#52d552" }}>
         <NavbarBrand style={{ color: "#FFFFFF" }}>
-          <img src={logo} width="50px;" style={{ paddingRight: "5px" }} />
+          <img src={logo} width="55px;" style={{ paddingRight: "6px" }} />
           Cadastro Unico de Pets - CUP
         </NavbarBrand>
         <Nav className="ms-auto" navbar>

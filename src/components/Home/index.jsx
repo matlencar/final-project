@@ -11,8 +11,8 @@ import { FormsPets } from '../FormsPets/index'
 
 export function Home() {
     const [nome, setNome] = useState('');
-    // const [sexo, setSexo] = useState('');
-    // const [tipo, setTipo] = useState('');
+    const [tutor, setTutor] = useState('');
+    const [idade, setIdade] = useState(0);
     const [email, setEmail] = useState('');
   return (
     <>
@@ -27,7 +27,25 @@ export function Home() {
           onChange={(e) => setNome(e.target.value)}
           />
         </FormGroup>
+        <FormGroup style={{ width: '100px' }}>
+          <Label for="nome">Idade: </Label>
+          <Input
+          invalid={idade === 0 ? true : false} 
+          placeholder="Digite a idade"
+          value={idade}
+          onChange={(e) => setIdade(e.target.value)}
+          />
+        </FormGroup>
         <FormsPets />
+        <FormGroup>
+        <Label for="nome">Nome do tutor: </Label>
+          <Input
+          invalid={tutor === '' ? true : false} 
+          placeholder="Digite o nome do tutor"
+          value={tutor}
+          onChange={(e) => setTutor(e.target.value)}
+          />
+        </FormGroup>
         <FormGroup>
         <Label for="nome">E-Mail: </Label>
           <Input
@@ -39,7 +57,7 @@ export function Home() {
         </FormGroup>
       </Form>
 
-      <div style={{ display: 'flex', gap: '1rem' }}>
+      <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
         <Button style={{ borderRadius: '6px'}} size="20px" color="success">
           Confirmar
         </Button>
